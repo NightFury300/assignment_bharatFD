@@ -15,8 +15,8 @@ const faqSchema = new mongoose.Schema({
     },
 });
 
-faqSchema.methods.getTranslatedQuestion = (languageCode) => {
-  const translationKey = `question_${languageCode}`;
+faqSchema.methods.getTranslatedQuestion = function (languageCode) {
+  const translationKey = `question_${languageCode}`;    
   return this.translations[translationKey] || this.question;
 };
 
