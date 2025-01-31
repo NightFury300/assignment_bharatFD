@@ -1,7 +1,7 @@
 import { expect } from 'chai';
-import request from "supertest"
+import request from 'supertest';
 import { app } from '../app.js';
-import "./testsSetup.js"
+import './testsSetup.js';
 
 describe('FAQ API', () => {
   it('should fetch FAQs in Bengali', async () => {

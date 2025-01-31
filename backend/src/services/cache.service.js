@@ -1,4 +1,4 @@
-import {client} from "../utils/RedisClient.js"
+import { client } from '../utils/RedisClient.js';
 
 const getCache = async (key) => {
   try {
@@ -18,4 +18,4 @@ const setCache = async (key, value, ttl = 3600) => {
   }
 };
 
-export {setCache,getCache}
+export { setCache, getCache };
