@@ -20,7 +20,7 @@ const setCache = async (key, value, ttl = 3600) => {
 
 const clearCache = async () => {
   try{
-    await client.flushDb()
+    await client.flushAll()
   }catch(err){
     console.error(`Error Flushing Cache`,err);
   }
