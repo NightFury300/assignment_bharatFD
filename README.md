@@ -13,6 +13,7 @@ A service to accept FAQs and translate the question automatically to other langu
 - **Caching**: Redis
 - **Frontend**: React.js
 - **Database**: MongoDB
+- **Testing**: Mocha, Chai, Supertest
 - **Deployed**: Docker
 
 ## Steps to Set Up (Using Docker)- RECOMMEND APPROACH
