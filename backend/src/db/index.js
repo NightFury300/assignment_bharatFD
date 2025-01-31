@@ -13,5 +13,4 @@ console.error("Connection to DB failed",error);
 process.exit(1);
 }
 }
-
 export default connectDB;
