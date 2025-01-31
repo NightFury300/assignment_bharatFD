@@ -6,6 +6,6 @@ const router = Router();
 
 router.route('/faqs').get(checkCache, fetchFAQs);
 router.route('/faqs').post(submitFAQ);
-router.route('/update-cache').get(fetchFAQs);
+router.route('/clear-cache').get(fetchFAQs);
 
 export default router;

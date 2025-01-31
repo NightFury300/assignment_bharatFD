@@ -17,9 +17,9 @@ const FAQForm = () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      const updateCacheRes = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/update-cache`)
+      /*const updateCacheRes = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/clear-cache`)
       if(updateCacheRes.ok)
-        console.log("Cache Updated");
+        console.log("Cache Cleared");*/
         
       const data = await response.json();
       console.log('FAQ created:', data);

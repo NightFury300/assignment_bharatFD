@@ -1,7 +1,7 @@
 import { asyncHandler } from '../utils/asyncHandler.js';
 import { FAQ } from '../models/FAQ.model.js';
 import { APIResponse } from '../utils/APIResponse.js';
-import { setCache } from '../services/cache.service.js';
+import { clearCache, setCache } from '../services/cache.service.js';
 import { APIError } from '../utils/APIError.js';
 
 const fetchFAQs = asyncHandler(async (req, res) => {
@@ -27,7 +27,7 @@ const submitFAQ = asyncHandler(async (req, res) => {
 
   const faq = new FAQ({ question, answer });
   await faq.save();
-
+  await clearCache()
   res.status(201).json(new APIResponse(201, faq, 'FAQ Created Successfully'));
 });
 

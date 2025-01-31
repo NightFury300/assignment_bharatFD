@@ -18,4 +18,12 @@ const setCache = async (key, value, ttl = 3600) => {
   }
 };
 
-export { setCache, getCache };
+const clearCache = async () => {
+  try{
+    await client.flushDb()
+  }catch(err){
+    console.error(`Error Flushing Cache`,err);
+  }
+}
+
+export { setCache, getCache, clearCache };
