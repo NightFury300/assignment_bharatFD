@@ -11,7 +11,7 @@ const faqSchema = new mongoose.Schema({
     },
   translations: {
     question_hi: String,
-    question_bn: String,
+    question_bn: String
     },
 });
 
