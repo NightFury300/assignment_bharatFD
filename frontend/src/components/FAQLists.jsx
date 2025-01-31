@@ -11,6 +11,7 @@ const FAQList = () => {
   const fetchFAQs = async () => {
     try {
       const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/faqs?lang=${lang}`);
+      
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

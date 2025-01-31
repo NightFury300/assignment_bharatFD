@@ -17,6 +17,10 @@ const FAQForm = () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
+      const updateCacheRes = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/update-cache`)
+      if(updateCacheRes.ok)
+        console.log("Cache Updated");
+        
       const data = await response.json();
       console.log('FAQ created:', data);
       alert('FAQ created successfully!');
@@ -48,6 +52,7 @@ const FAQForm = () => {
             const data = editor.getData();
             setAnswer(data);
           }}
+          config={{licenseKey:import.meta.env.VITE_CK_LICENSE_KEY}}
         />
       </div>
       <button type="submit">Submit</button>

@@ -26,7 +26,7 @@ faqSchema.pre('save', async function () {
     try {
       const hindiTranslation = await translate(this.question, { to: 'hi' });
       this.translations.question_hi = hindiTranslation.text;
-
+      
       const bengaliTranslation = await translate(this.question, { to: 'bn' });
       this.translations.question_bn = bengaliTranslation.text;
 

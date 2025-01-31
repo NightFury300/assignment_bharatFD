@@ -19,7 +19,7 @@ const fetchFAQs = asyncHandler(async (req,res) => {
 
 const submitFAQ = asyncHandler(async (req, res) => {
   const { question, answer } = req.body;
-
+  
   if(!question || !answer)
     throw new APIError(400,"Please Provide a Valid Question and Answer")
 
